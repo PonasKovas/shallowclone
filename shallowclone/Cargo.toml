@@ -1,0 +1,16 @@
+[package]
+name = "shallowclone"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shallowclone-derive = { path = "../shallowclone-derive/" }
+serde = { version = "1", optional = true }
+
+# optional deps for implementing the trait for foreign types
+indexmap = { version = "2", optional = true }
+
+[features]
+indexmap = ["dep:indexmap"]
+# optional serde Serialize/Deserialize impls for CoCow types.
+serde = ["dep:serde"]

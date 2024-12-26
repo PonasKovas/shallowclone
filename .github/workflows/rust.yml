@@ -1,0 +1,24 @@
+name: Rust
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+      - name: Disable rust-lld
+        run: echo RUSTFLAGS=${RUSTFLAGS}\ -Zlinker-features=-lld >> $GITHUB_ENV
+      - name: Build
+        run: cargo build --verbose --workspace
+      - name: Run tests
+        run: cargo test --verbose --workspace
