@@ -8,7 +8,7 @@ repository = "https://github.com/PonasKovas/shallowclone"
 readme = "../README.md"
 
 [dependencies]
-shallowclone-derive = { path = "../shallowclone-derive/" }
+shallowclone-derive = { version = "0.1.0", path = "../shallowclone-derive/" }
 serde = { version = "1", optional = true }
 
 # optional deps for implementing the trait for foreign types
