@@ -30,7 +30,7 @@ pub use shallowclone::ShallowClone;
 
 /// Automatically derives the [`MakeOwned`] trait
 ///
-/// ## `#[shallowclone(skip)]` attribute
+/// ## `#[makeowned(skip)]` attribute
 ///
 /// You can use this attribute on generics (type or lifetime) to not place [`MakeOwned`] bounds on them,
 /// if your type requires so.

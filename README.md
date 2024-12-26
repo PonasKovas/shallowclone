@@ -1,5 +1,8 @@
 # shallowclone
 
+[![crates.io](https://img.shields.io/crates/v/shallowclone)](https://crates.io/crates/shallowclone)
+[![docs.rs](https://img.shields.io/docsrs/shallowclone)](https://docs.rs/shallowclone/)
+
 A Rust library providing traits for working with copy-on-write values efficiently.
 
 ### [`ShallowClone`](https://ponaskovas.github.io/shallowclone/shallowclone/trait.ShallowClone.html) trait
