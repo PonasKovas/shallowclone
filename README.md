@@ -2,7 +2,7 @@
 
 A Rust library providing traits for working with copy-on-write values efficiently.
 
-### `ShallowClone` trait
+### [`ShallowClone`](https://ponaskovas.github.io/shallowclone/shallowclone/trait.ShallowClone.html) trait
 
 This is basically the same as the standard [`Clone`](https://doc.rust-lang.org/std/clone/trait.Clone.html),
 except that it's optimized for copy-on-write values so that they're not cloned. Shallow cloning a
@@ -14,7 +14,7 @@ original | after `ShallowClone::shallow_clone(&'a T)`
 `Cow::Owned(T)` | `Cow::Borrowed(&'a T)`
 `Cow::Borrowed(&'b T)` | `Cow::Borrowed(&'a T)`
 
-### `MakeOwned` trait
+### [`MakeOwned`](https://ponaskovas.github.io/shallowclone/shallowclone/trait.MakeOwned.html) trait
 
 This is kind of a side effect of `ShallowClone`. It allows to convert any value that implements it
 to an equivalent type which is `'static` - no references, completely self-sufficient. It does that by replacing
