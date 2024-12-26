@@ -2,6 +2,10 @@
 name = "shallowclone-derive"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Traits for working with copy-on-write types more efficiently."
+repository = "https://github.com/PonasKovas/shallowclone"
+readme = "../README.md"
 
 [lib]
 proc-macro = true
